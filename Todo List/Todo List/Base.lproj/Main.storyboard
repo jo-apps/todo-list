@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Todo List View Controller-->
+        <!--Todoey-->
         <scene sceneID="8Fg-ui-zsI">
             <objects>
                 <tableViewController id="CMB-q7-3ez" customClass="TodoListViewController" customModule="Todo_List" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,7 +30,7 @@
                             <outlet property="delegate" destination="CMB-q7-3ez" id="oaO-LM-zZ5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kXD-jv-hB9"/>
+                    <navigationItem key="navigationItem" title="Todoey" id="kXD-jv-hB9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMb-kI-qvk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -41,8 +41,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ns-aQ-uZx" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o2Y-dr-akP">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="o2Y-dr-akP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

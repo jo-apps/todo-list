@@ -9,11 +9,27 @@ import UIKit
 
 class TodoListViewController: UITableViewController {
 
+    let todoItems = ["Buy eggs", "Water plants"]
+     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .red
+        
     }
 
 
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todoItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TotoItemCell", for: indexPath)
+        cell.textLabel?.text = todoItems[indexPath.row]
+        return cell
+    }
 }
 
