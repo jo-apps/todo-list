@@ -13,6 +13,7 @@
 		63881A74289699A600055C7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63881A72289699A600055C7E /* Main.storyboard */; };
 		63881A76289699A900055C7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63881A75289699A900055C7E /* Assets.xcassets */; };
 		63881A79289699A900055C7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63881A77289699A900055C7E /* LaunchScreen.storyboard */; };
+		63881A812896D0EE00055C7E /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63881A802896D0EE00055C7E /* TodoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		63881A75289699A900055C7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63881A78289699A900055C7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63881A7A289699A900055C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63881A802896D0EE00055C7E /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				63881A6C289699A600055C7E /* AppDelegate.swift */,
 				63881A6E289699A600055C7E /* SceneDelegate.swift */,
 				63881A70289699A600055C7E /* TodoListViewController.swift */,
+				63881A802896D0EE00055C7E /* TodoItem.swift */,
 				63881A72289699A600055C7E /* Main.storyboard */,
 				63881A75289699A900055C7E /* Assets.xcassets */,
 				63881A77289699A900055C7E /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				63881A71289699A600055C7E /* TodoListViewController.swift in Sources */,
 				63881A6D289699A600055C7E /* AppDelegate.swift in Sources */,
+				63881A812896D0EE00055C7E /* TodoItem.swift in Sources */,
 				63881A6F289699A600055C7E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

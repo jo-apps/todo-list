@@ -8,13 +8,15 @@
 import UIKit
 
 class TodoListViewController: UITableViewController {
-
-    var todoItems = ["Buy eggs", "Water plants"]
+    var todoItems = [TodoItem]()
      
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
         
+        todoItems.append(TodoItem(title: "Buy eggs"))
+        todoItems.append(TodoItem(title: "Water plants"))
+        todoItems.append(TodoItem(title: "Sleep"))
     }
 
 
@@ -23,19 +25,18 @@ class TodoListViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-       if tableView.cellForRow(at: indexPath)?.accessoryType == .checkmark  {
-           tableView.cellForRow(at: indexPath)?.accessoryType = .none
-       }
-       else {
-           tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-       }
+        todoItems[indexPath.row].checked = !todoItems[indexPath.row].checked
         tableView.deselectRow(at: indexPath, animated: true)
+        tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TotoItemCell", for: indexPath)
-        cell.textLabel?.text = todoItems[indexPath.row]
+        let item = todoItems[indexPath.row]
+
+        cell.textLabel?.text = item.title
+        cell.accessoryType = item.checked ? .checkmark : .none
+
         return cell
     }
     
@@ -48,7 +49,7 @@ class TodoListViewController: UITableViewController {
                 return
             }
             
-            strongSelf.todoItems.append(text)
+            strongSelf.todoItems.append(TodoItem(title: text))
             strongSelf.tableView.reloadData()
         }
         
